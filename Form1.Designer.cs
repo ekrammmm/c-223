@@ -1,4 +1,4 @@
-﻿namespace save
+﻿namespace Assignment4_on_GUI
 {
     partial class Form1
     {
@@ -29,189 +29,274 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.addbtn = new System.Windows.Forms.Button();
-            this.cancelbtn = new System.Windows.Forms.Button();
-            this.numtxt = new System.Windows.Forms.TextBox();
-            this.invtxt = new System.Windows.Forms.TextBox();
-            this.objtxt = new System.Windows.Forms.TextBox();
-            this.counttxt = new System.Windows.Forms.TextBox();
-            this.pricetxt = new System.Windows.Forms.TextBox();
-            this.numlbl = new System.Windows.Forms.Label();
-            this.datelbl = new System.Windows.Forms.Label();
-            this.invlbl = new System.Windows.Forms.Label();
-            this.objlbl = new System.Windows.Forms.Label();
-            this.countlbl = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.pricelbl = new System.Windows.Forms.Label();
-            this.newgridproduct = new System.Windows.Forms.DataGridView();
-            this.errorProviderobjname = new System.Windows.Forms.ErrorProvider(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.newgridproduct)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProviderobjname)).BeginInit();
+            this.txt_number = new System.Windows.Forms.TextBox();
+            this.txt_inventorynumber = new System.Windows.Forms.TextBox();
+            this.txt_objectname = new System.Windows.Forms.TextBox();
+            this.txt_price = new System.Windows.Forms.TextBox();
+            this.txt_count = new System.Windows.Forms.TextBox();
+            this.txt_buttonclick2 = new System.Windows.Forms.Button();
+            this.txt_buttonclick1 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txt_date = new System.Windows.Forms.DateTimePicker();
+            this.gridview_register = new System.Windows.Forms.DataGridView();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label7 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.gridview_register)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // addbtn
+            // label1
             // 
-            this.addbtn.Location = new System.Drawing.Point(53, 247);
-            this.addbtn.Name = "addbtn";
-            this.addbtn.Size = new System.Drawing.Size(75, 23);
-            this.addbtn.TabIndex = 0;
-            this.addbtn.Text = "ADD";
-            this.addbtn.UseVisualStyleBackColor = true;
-            this.addbtn.Click += new System.EventHandler(this.addbtn_Click);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(232, 25);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(95, 27);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Number";
             // 
-            // cancelbtn
+            // label3
             // 
-            this.cancelbtn.Location = new System.Drawing.Point(169, 247);
-            this.cancelbtn.Name = "cancelbtn";
-            this.cancelbtn.Size = new System.Drawing.Size(75, 23);
-            this.cancelbtn.TabIndex = 1;
-            this.cancelbtn.Text = "CANCEL";
-            this.cancelbtn.UseVisualStyleBackColor = true;
-            this.cancelbtn.Click += new System.EventHandler(this.cancelbtn_Click);
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(930, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(194, 27);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Inventory number";
             // 
-            // numtxt
+            // label4
             // 
-            this.numtxt.Location = new System.Drawing.Point(53, 63);
-            this.numtxt.Name = "numtxt";
-            this.numtxt.Size = new System.Drawing.Size(100, 20);
-            this.numtxt.TabIndex = 2;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(235, 115);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(140, 27);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Object name";
             // 
-            // invtxt
+            // label5
             // 
-            this.invtxt.Location = new System.Drawing.Point(535, 66);
-            this.invtxt.Name = "invtxt";
-            this.invtxt.Size = new System.Drawing.Size(100, 20);
-            this.invtxt.TabIndex = 3;
-            // 
-            // objtxt
-            // 
-            this.objtxt.Location = new System.Drawing.Point(53, 137);
-            this.objtxt.Name = "objtxt";
-            this.objtxt.Size = new System.Drawing.Size(100, 20);
-            this.objtxt.TabIndex = 4;
-            // 
-            // counttxt
-            // 
-            this.counttxt.Location = new System.Drawing.Point(53, 206);
-            this.counttxt.Name = "counttxt";
-            this.counttxt.Size = new System.Drawing.Size(100, 20);
-            this.counttxt.TabIndex = 5;
-            // 
-            // pricetxt
-            // 
-            this.pricetxt.Location = new System.Drawing.Point(369, 206);
-            this.pricetxt.Name = "pricetxt";
-            this.pricetxt.Size = new System.Drawing.Size(100, 20);
-            this.pricetxt.TabIndex = 6;
-            // 
-            // numlbl
-            // 
-            this.numlbl.AutoSize = true;
-            this.numlbl.Location = new System.Drawing.Point(50, 47);
-            this.numlbl.Name = "numlbl";
-            this.numlbl.Size = new System.Drawing.Size(54, 13);
-            this.numlbl.TabIndex = 7;
-            this.numlbl.Text = "NUMBER";
-            // 
-            // datelbl
-            // 
-            this.datelbl.AutoSize = true;
-            this.datelbl.Location = new System.Drawing.Point(270, 47);
-            this.datelbl.Name = "datelbl";
-            this.datelbl.Size = new System.Drawing.Size(36, 13);
-            this.datelbl.TabIndex = 8;
-            this.datelbl.Text = "DATE";
-            // 
-            // invlbl
-            // 
-            this.invlbl.AutoSize = true;
-            this.invlbl.Location = new System.Drawing.Point(532, 47);
-            this.invlbl.Name = "invlbl";
-            this.invlbl.Size = new System.Drawing.Size(121, 13);
-            this.invlbl.TabIndex = 9;
-            this.invlbl.Text = "INVONTORY NUMBER";
-            // 
-            // objlbl
-            // 
-            this.objlbl.AutoSize = true;
-            this.objlbl.Location = new System.Drawing.Point(50, 111);
-            this.objlbl.Name = "objlbl";
-            this.objlbl.Size = new System.Drawing.Size(85, 13);
-            this.objlbl.TabIndex = 10;
-            this.objlbl.Text = "OBJECT NAME ";
-            // 
-            // countlbl
-            // 
-            this.countlbl.AutoSize = true;
-            this.countlbl.Location = new System.Drawing.Point(50, 177);
-            this.countlbl.Name = "countlbl";
-            this.countlbl.Size = new System.Drawing.Size(45, 13);
-            this.countlbl.TabIndex = 11;
-            this.countlbl.Text = "COUNT";
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(280, 233);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(61, 27);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Price";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(456, 325);
+            this.label6.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(33, 233);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(0, 13);
-            this.label6.TabIndex = 12;
+            this.label6.Size = new System.Drawing.Size(72, 27);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "Count";
             // 
-            // dateTimePicker1
+            // txt_number
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(239, 63);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 13;
+            this.txt_number.Location = new System.Drawing.Point(237, 71);
+            this.txt_number.Name = "txt_number";
+            this.txt_number.Size = new System.Drawing.Size(179, 26);
+            this.txt_number.TabIndex = 7;
             // 
-            // pricelbl
+            // txt_inventorynumber
             // 
-            this.pricelbl.AutoSize = true;
-            this.pricelbl.Location = new System.Drawing.Point(377, 177);
-            this.pricelbl.Name = "pricelbl";
-            this.pricelbl.Size = new System.Drawing.Size(39, 13);
-            this.pricelbl.TabIndex = 14;
-            this.pricelbl.Text = "PRICE";
+            this.txt_inventorynumber.Location = new System.Drawing.Point(935, 71);
+            this.txt_inventorynumber.Name = "txt_inventorynumber";
+            this.txt_inventorynumber.Size = new System.Drawing.Size(189, 26);
+            this.txt_inventorynumber.TabIndex = 8;
             // 
-            // newgridproduct
+            // txt_objectname
             // 
-            this.newgridproduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.newgridproduct.Location = new System.Drawing.Point(53, 288);
-            this.newgridproduct.Name = "newgridproduct";
-            this.newgridproduct.Size = new System.Drawing.Size(712, 150);
-            this.newgridproduct.TabIndex = 15;
-            this.newgridproduct.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.newgridproduct_CellContentClick);
+            this.txt_objectname.Location = new System.Drawing.Point(237, 155);
+            this.txt_objectname.Name = "txt_objectname";
+            this.txt_objectname.Size = new System.Drawing.Size(745, 26);
+            this.txt_objectname.TabIndex = 9;
             // 
-            // errorProviderobjname
+            // txt_price
             // 
-            this.errorProviderobjname.ContainerControl = this;
+            this.txt_price.Location = new System.Drawing.Point(275, 278);
+            this.txt_price.Name = "txt_price";
+            this.txt_price.Size = new System.Drawing.Size(100, 26);
+            this.txt_price.TabIndex = 10;
+            // 
+            // txt_count
+            // 
+            this.txt_count.Location = new System.Drawing.Point(35, 278);
+            this.txt_count.Name = "txt_count";
+            this.txt_count.Size = new System.Drawing.Size(180, 26);
+            this.txt_count.TabIndex = 11;
+            // 
+            // txt_buttonclick2
+            // 
+            this.txt_buttonclick2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_buttonclick2.Location = new System.Drawing.Point(406, 337);
+            this.txt_buttonclick2.Name = "txt_buttonclick2";
+            this.txt_buttonclick2.Size = new System.Drawing.Size(123, 32);
+            this.txt_buttonclick2.TabIndex = 12;
+            this.txt_buttonclick2.Text = "Cancel";
+            this.txt_buttonclick2.UseVisualStyleBackColor = true;
+            this.txt_buttonclick2.Click += new System.EventHandler(this.txt_buttonclick2_Click);
+            // 
+            // txt_buttonclick1
+            // 
+            this.txt_buttonclick1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_buttonclick1.Location = new System.Drawing.Point(24, 337);
+            this.txt_buttonclick1.Name = "txt_buttonclick1";
+            this.txt_buttonclick1.Size = new System.Drawing.Size(224, 31);
+            this.txt_buttonclick1.TabIndex = 13;
+            this.txt_buttonclick1.Text = "Add";
+            this.txt_buttonclick1.UseVisualStyleBackColor = true;
+            this.txt_buttonclick1.Click += new System.EventHandler(this.txt_buttonclick1_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(537, 25);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(60, 27);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Date";
+            // 
+            // txt_date
+            // 
+            this.txt_date.Location = new System.Drawing.Point(542, 71);
+            this.txt_date.Name = "txt_date";
+            this.txt_date.Size = new System.Drawing.Size(260, 26);
+            this.txt_date.TabIndex = 14;
+            // 
+            // gridview_register
+            // 
+            this.gridview_register.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridview_register.Location = new System.Drawing.Point(24, 390);
+            this.gridview_register.Name = "gridview_register";
+            this.gridview_register.RowHeadersWidth = 62;
+            this.gridview_register.RowTemplate.Height = 28;
+            this.gridview_register.Size = new System.Drawing.Size(851, 181);
+            this.gridview_register.TabIndex = 15;
+            this.gridview_register.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridview_register_CellContentClick);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // checkedListBox1
+            // 
+            this.checkedListBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkedListBox1.FormattingEnabled = true;
+            this.checkedListBox1.Items.AddRange(new object[] {
+            "Is Regular",
+            "Is Unique",
+            "Is Null"});
+            this.checkedListBox1.Location = new System.Drawing.Point(895, 369);
+            this.checkedListBox1.Name = "checkedListBox1";
+            this.checkedListBox1.Size = new System.Drawing.Size(176, 85);
+            this.checkedListBox1.TabIndex = 19;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(6, 25);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(110, 29);
+            this.radioButton1.TabIndex = 20;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Sample";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(6, 70);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(117, 29);
+            this.radioButton2.TabIndex = 21;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Variable";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // radioButton3
+            // 
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.CheckAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.radioButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton3.Location = new System.Drawing.Point(1087, 314);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(159, 29);
+            this.radioButton3.TabIndex = 22;
+            this.radioButton3.TabStop = true;
+            this.radioButton3.Text = "radioButton3";
+            this.radioButton3.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.radioButton1);
+            this.groupBox1.Controls.Add(this.radioButton2);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(1087, 369);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(200, 100);
+            this.groupBox1.TabIndex = 23;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "groupBox1";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft YaHei UI", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(34, 25);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(114, 42);
+            this.label7.TabIndex = 24;
+            this.label7.Text = "label7\r\n";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.newgridproduct);
-            this.Controls.Add(this.pricelbl);
-            this.Controls.Add(this.dateTimePicker1);
+            this.ClientSize = new System.Drawing.Size(1332, 624);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.radioButton3);
+            this.Controls.Add(this.checkedListBox1);
+            this.Controls.Add(this.gridview_register);
+            this.Controls.Add(this.txt_date);
+            this.Controls.Add(this.txt_buttonclick1);
+            this.Controls.Add(this.txt_buttonclick2);
+            this.Controls.Add(this.txt_count);
+            this.Controls.Add(this.txt_price);
+            this.Controls.Add(this.txt_objectname);
+            this.Controls.Add(this.txt_inventorynumber);
+            this.Controls.Add(this.txt_number);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.countlbl);
-            this.Controls.Add(this.objlbl);
-            this.Controls.Add(this.invlbl);
-            this.Controls.Add(this.datelbl);
-            this.Controls.Add(this.numlbl);
-            this.Controls.Add(this.pricetxt);
-            this.Controls.Add(this.counttxt);
-            this.Controls.Add(this.objtxt);
-            this.Controls.Add(this.invtxt);
-            this.Controls.Add(this.numtxt);
-            this.Controls.Add(this.cancelbtn);
-            this.Controls.Add(this.addbtn);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Name = "Form1";
-            this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.newgridproduct)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProviderobjname)).EndInit();
+            this.Text = "Add Inventory";
+            this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.gridview_register)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -219,23 +304,28 @@
 
         #endregion
 
-        private System.Windows.Forms.Button addbtn;
-        private System.Windows.Forms.Button cancelbtn;
-        private System.Windows.Forms.TextBox numtxt;
-        private System.Windows.Forms.TextBox invtxt;
-        private System.Windows.Forms.TextBox objtxt;
-        private System.Windows.Forms.TextBox counttxt;
-        private System.Windows.Forms.TextBox pricetxt;
-        private System.Windows.Forms.Label numlbl;
-        private System.Windows.Forms.Label datelbl;
-        private System.Windows.Forms.Label invlbl;
-        private System.Windows.Forms.Label objlbl;
-        private System.Windows.Forms.Label countlbl;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Label pricelbl;
-        private System.Windows.Forms.DataGridView newgridproduct;
-        private System.Windows.Forms.ErrorProvider errorProviderobjname;
+        private System.Windows.Forms.TextBox txt_number;
+        private System.Windows.Forms.TextBox txt_inventorynumber;
+        private System.Windows.Forms.TextBox txt_objectname;
+        private System.Windows.Forms.TextBox txt_price;
+        private System.Windows.Forms.TextBox txt_count;
+        private System.Windows.Forms.Button txt_buttonclick2;
+        private System.Windows.Forms.Button txt_buttonclick1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DateTimePicker txt_date;
+        private System.Windows.Forms.DataGridView gridview_register;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.CheckedListBox checkedListBox1;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RadioButton radioButton3;
     }
 }
 

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text.RegularExpressions;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,66 +8,109 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Text.RegularExpressions;
 
-namespace save
+namespace Assignment4_on_GUI
 {
     public partial class Form1 : Form
     {
-        public Form1()
+        public string username { get; set; }
+        public Form1(string user)
         {
             InitializeComponent();
+            label7.Text = user;
         }
 
-
-        private void addbtn_Click(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
         {
-            product p = new product();
-            p.number = numtxt.Text;
-            p.date = dateTimePicker1.Text;
-            p.inventorynumber = invtxt.Text;
-            p.objectname = objtxt.Text;
-            p.count = counttxt.Text;
-            p.price = pricetxt.Text;
-            Regex regex = new Regex("@^(a-z)(z)$");
-            if (regex.IsMatch(objtxt.Text)) { 
-                MessageBox.Show("try ");
 
-            }
-            else
-            
-            if (string.IsNullOrEmpty(objtxt.Text))
+        }
+
+        private void txt_buttonclick1_Click(object sender, EventArgs e)
+        {
+           
+     
+           product md= new product();
             {
-        
-                MessageBox.Show("add name");
-                errorProviderobjname.SetError(objtxt,"add name");
+                md.number = txt_number.Text;
+                md.date=txt_date.Text;
+                md.inventorynumber = txt_inventorynumber.Text;
+                md.objectname = txt_objectname.Text;
+                md.price=txt_price.Text;
+                md.count=txt_count.Text;
+                checkedListBox1.CheckedItems.Contains(md);
+                String message = " ";
+                foreach (var item in checkedListBox1.CheckedItems)
+                {
+                    message += item.ToString();
+                }
+                MessageBox.Show(message);
                 
             }
-            else
+            md.save();
+            if (string.IsNullOrEmpty(txt_number.Text))
             {
-               /* if (objtxt.MaxLength < 3)
-                {
-                    MessageBox.Show("less than 3 charachter");
-                    errorProviderobjname.SetError(objtxt, "less than 3 charachter");
-                }*/
-                p.savee();
-                MessageBox.Show("item added");
-                newgridproduct.DataSource = null;
-                newgridproduct.DataSource = p.getall();
+                errorProvider1.SetError(txt_number, "Number is required");
+            }
+           /* else
+            { errorProvider1.Clear(); }
+           */
+
+          if (txt_number.Text .Length <3)
+            {
+                errorProvider1.SetError(txt_number, "Miniumum ");
+            }
+            Regex regex = new Regex(@"^[a-z] { 2}$");
+            if (regex.IsMatch(txt_objectname.Text))
+            {
 
             }
+            else
+            {
+                MessageBox.Show("Hmmm");
+            }
+
+            gridview_register.DataSource = null;
+            gridview_register.DataSource = product.GetAll();
+            //MessageBox.Show("Item Added");
+            
+         
+            
+           
+            
+            /* string number=txt_number.Text;
+             string date= txt_date.Text;
+             string inventory_number=txt_inventorynumber.Text;
+             string object_name=txt_objectname.Text;
+             string count=txt_count.Text;
+             string price=txt_price.Text;
+             MessageBox.Show("Item Added");*/
+        }
+
+        private void txt_buttonclick2_Click(object sender, EventArgs e)
+        {
+this.Close();
+        }
+
+        private void gridview_register_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
            
 
+
         }
 
-        private void cancelbtn_Click(object sender, EventArgs e)
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            this.Close();  
+
         }
 
-        private void newgridproduct_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void groupBox1_Enter(object sender, EventArgs e)
         {
-            
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
